@@ -2,9 +2,18 @@ import { ImFileMusic } from "react-icons/im";
 import { GrEmptyCircle } from "react-icons/gr";
 import { LuCircleSlash2 } from "react-icons/lu";
 import { FiRadio } from "react-icons/fi";
-import { BsArrowLeft } from "react-icons/bs";
-import { BsArrowRight } from "react-icons/bs";
-import { BsSearch } from "react-icons/bs";
+import { BsArrowLeft, BsThreeDots, BsMusicNoteBeamed } from "react-icons/bs";
+import {
+  BsArrowRight,
+  BsFillPlayFill,
+  BsPauseFill,
+  BsDot,
+} from "react-icons/bs";
+import { BsSearch, BsPlayCircle, BsMusicNoteList } from "react-icons/bs";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { CiRepeat, CiShuffle } from "react-icons/ci";
+import { MdSkipPrevious, MdSkipNext } from "react-icons/md";
+import { HiOutlineSpeakerXMark, HiOutlineSpeakerWave } from "react-icons/hi2";
 
 const icons = {
   ImFileMusic,
@@ -14,5 +23,20 @@ const icons = {
   BsArrowLeft,
   BsArrowRight,
   BsSearch,
+  AiFillHeart,
+  AiOutlineHeart,
+  BsThreeDots,
+  CiRepeat,
+  MdSkipPrevious,
+  MdSkipNext,
+  BsFillPlayFill,
+  CiShuffle,
+  BsPauseFill,
+  BsMusicNoteBeamed,
+  BsDot,
+  BsPlayCircle,
+  BsMusicNoteList,
+  HiOutlineSpeakerXMark,
+  HiOutlineSpeakerWave,
 };
 export default icons;

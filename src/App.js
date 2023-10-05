@@ -2,10 +2,25 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Home, Login, Public } from "./containers/public";
+import {
+  Home,
+  Login,
+  Public,
+  Personal,
+  Album,
+  Wechart,
+} from "./containers/public";
 import { Routes, Route } from "react-router-dom";
 import part from "./ultils/part";
+import { useEffect } from "react";
+import * as actions from "./store/actions";
+
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(actions.getHome());
+  }, []);
+
   return (
     <div>
       <div className="">
@@ -13,6 +28,10 @@ function App() {
           <Route path={part.PUBLIC} element={<Public />}>
             <Route path={part.HOME} element={<Home />} />
             <Route path={part.LOGIN} element={<Login />} />
+            <Route path={part.MY_MUSIC} element={<Personal />} />
+            <Route path={part.ALBUM__TITLE__PID} element={<Album />} />
+            <Route path={part.PLAYLIST__TITLE__PID} element={<Album />} />
+            <Route path={part.WEERANK__TITLE__PID} element={<Wechart />} />
 
             <Route path={part.STAR} element={<Home />} />
           </Route>
